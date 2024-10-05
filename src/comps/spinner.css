@@ -1,0 +1,15 @@
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1); /* Light border */
+    border-left-color: #f00; /* Red or any primary color */
+    border-radius: 50%;
+    width: 40px; /* Size of the spinner */
+    height: 40px;
+    animation: spin 1s linear infinite; /* Animation effect */
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
