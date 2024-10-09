@@ -1,6 +1,6 @@
 import express, {json, urlencoded} from "express";
 import CORS from "cors";
-import { NewCode } from "./cron.mjs"
+import { NewCode, currentCode } from "./cron.mjs"
 import bcrypt from "bcrypt";
 import { DB } from './db.mjs'
 import { join } from "path";
@@ -48,7 +48,7 @@ app.post("/api/code/auth", (req, res) => {
     const { auth } = req.body;
 
     if(auth == passcode){
-        res.send("1");
+        res.send(currentCode);
     }else{
         res.status(400).json({
             status: 0,

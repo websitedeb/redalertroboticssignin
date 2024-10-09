@@ -1,7 +1,7 @@
 import bcrypt from 'bcrypt';
 import schedule from 'node-schedule';
 
-let currentCode;
+export let currentCode;
 let currentHashedCode;
 
 export async function NewCode() {
