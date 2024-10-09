@@ -35,9 +35,9 @@ export function Auth(){
                     <div className="alert alert-danger text-3xl text-center" role="alert">
                             <span>The Code wasn't Correct...</span>
                             <br></br>
-                            <Link onClick={() => window.location.reload()}>Retry?</Link>
+                            <Link onClick={() => window.location.reload()}><i class="bi bi-arrow-clockwise"></i> Retry?</Link>
                             <span> or </span>
-                            <Link to="/">Go back?</Link>
+                            <Link to="/"><i class="bi bi-arrow-90deg-left"></i> Go back?</Link>
                     </div>
                 </div>
                 <Outlet />
@@ -50,7 +50,7 @@ export function Auth(){
             <>
                 <div id="main" className="block bg-gray-100 min-h-screen flex items-center justify-center">
                     <div className="alert alert-success text-3xl text-center" role="alert">
-                            {data} <br></br> <Link to="/">Go back</Link>
+                            {data} <br></br> <Link to="/"><i class="bi bi-arrow-90deg-left"></i> &nbsp; Go back</Link>
                     </div>
                 </div>
                 <Outlet />
@@ -87,9 +87,15 @@ export function Auth(){
                             <i className="bi bi-check-lg"></i>
                             <span>Get Code</span>
                         </button>
+                        <Link to="/" className="text-black text-center justify-center items-center text-xl text-center transition-all hover:text-red-600">
+                            <i class="bi bi-arrow-90deg-left"></i>
+                            &nbsp;
+                            Go Back
+                        </Link>
                     </form>
                 </div>
             </div>
+            <Outlet />
         </>
     )
 }
