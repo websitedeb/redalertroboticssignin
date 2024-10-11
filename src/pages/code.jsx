@@ -50,7 +50,7 @@ export function Auth(){
             <>
                 <div id="main" className="block bg-gray-100 min-h-screen flex items-center justify-center">
                     <div className="alert alert-success text-3xl text-center" role="alert">
-                            {data} <br></br> <Link to="/"><i class="bi bi-arrow-90deg-left"></i> &nbsp; Go back</Link>
+                            {data} <br></br> <Link to="/"><i class="bi bi-arrow-90deg-left"></i> Go back</Link>
                     </div>
                 </div>
                 <Outlet />
