@@ -106,6 +106,6 @@ public contains the html file that the components would be rendered on
     &nbsp;&nbsp;JSON: 0.2%<br />
  ⏰time wasted: 3 weeks
 
-![](https://cdn.donmai.us/sample/cc/20/sample-cc20def22845b688668b03615d7db1f1.jpg)
+<img src="https://cdn.donmai.us/sample/cc/20/sample-cc20def22845b688668b03615d7db1f1.jpg" height=500 width=500 />
 
 made by "Sarthak Ghoshal" / [websitedeb](https://github.com/websitedeb) on behalf of "Red Alert Robotics 1741" / [RAR1741](https://github.com/RAR1741)
