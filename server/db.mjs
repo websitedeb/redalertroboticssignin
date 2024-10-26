@@ -6,6 +6,7 @@ config({ path: join(process.cwd(), "/server/.env") });
 
 const timeSchema = new mongoose.Schema({
   time: Date,
+  direction: String
 });
 
 const personSchema = new mongoose.Schema({
@@ -17,7 +18,7 @@ export class DB {
   constructor() {
     mongoose
       .connect(process.env.URI)
-      .then(() => console.log("Database connected successfully"))
+      .then(() => {})
       .catch((err) => {
         console.error("Database connection error:", err);
         process.exit(1); 
@@ -26,8 +27,8 @@ export class DB {
     this.People = mongoose.model("People", personSchema);
   }
 
-  add(nam, tim) {
-    const newTime = { time: new Date(tim) };
+  add(nam, tim, ratio) {
+    const newTime = { time: new Date(tim), direction: ratio };
 
     return this.People.findOneAndUpdate(
       { name: nam }, 
@@ -35,7 +36,6 @@ export class DB {
       { upsert: true, new: true }
     )
       .then((person) => {
-        console.log("Person added or updated successfully");
         return person;
       })
       .catch((err) => {

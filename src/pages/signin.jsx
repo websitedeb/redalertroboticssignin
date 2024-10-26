@@ -26,6 +26,7 @@ export default function Signin() {
             name: formData.get("name"),
             date: formData.get("date"),
             code: formData.get("code"),
+            ratio: formData.get("ratio")
         });
         return response.data;
     }
@@ -88,6 +89,29 @@ export default function Signin() {
                                 min={10000}
                                 max={99999}
                             />
+                        </div>
+                        <div className="w-full">
+                            <input
+                                type="radio"
+                                name="ratio" 
+                                id="ratio" 
+                                required
+                                className="selection: accent-red-600"
+                                value="out"
+                            />
+                            <label for="ratio_in">&nbsp;<i class="bi bi-door-open"></i><span>coming in</span></label>
+                            &nbsp;
+                            |
+                            &nbsp;
+                            <input
+                                type="radio"
+                                name="ratio" 
+                                required
+                                id="ratio" 
+                                className="selection: accent-red-600"
+                                value="out"
+                            />
+                            <label for="ratio_out">&nbsp;<i class="bi bi-door-closed"></i><span>going out</span></label>
                         </div>
                         <div className={test} role="alert">
                             {test === "alert alert-success" ? "Success!" : test === "alert alert-danger" ? "Error!" : ""}

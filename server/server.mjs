@@ -7,7 +7,7 @@ import { join } from "path";
 import { config } from "dotenv";
 
 config({ path: join(process.cwd(), "/server/.env") });
-const passcode = process.env.CODE; //code for staff to see the student code
+const passcode = process.env.CODE;
 
 const app = express();
 const db = new DB()
@@ -21,17 +21,16 @@ app.use(CORS({
 }));
 
 app.listen(8080, async () => {
-    print('server is on');
     hash = await NewCode();
 });
 
 app.post("/api/signin", (req, res) => {
-    const { name, date, code } = req.body;
+    const { name, date, code, ratio } = req.body;
     const formattedDate = new Date(date);
 
     bcrypt.compare(`${code}`, `${hash}`).then((result) => {
         if (result) {
-            db.add(name.toLowerCase(), formattedDate);
+            db.add(name.toLowerCase(), formattedDate, ratio);
             res.json({
                 status: 1
             });

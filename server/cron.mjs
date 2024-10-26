@@ -19,8 +19,6 @@ export async function NewCode() {
         const hashedCode = await hashCode(code);
         currentCode = code;
         currentHashedCode = hashedCode;
-
-        console.log(`Generated Code: ${currentCode}`);
     };
 
     
