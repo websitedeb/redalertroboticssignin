@@ -100,10 +100,10 @@ public contains the html file that the components would be rendered on
  🗄️files: 43,112<br />
  📁folders: 5,339<br />
  </>code:<br />
-    &nbsp;&nbsp;Javascript: 90.4%
-    &nbsp;&nbsp;HTML: 6.2%
-    &nbsp;&nbsp;CSS: 3.2%
-    &nbsp;&nbsp;JSON: 0.2%
+    &nbsp;&nbsp;Javascript: 90.4%<br />
+    &nbsp;&nbsp;HTML: 6.2%<br />
+    &nbsp;&nbsp;CSS: 3.2%<br />
+    &nbsp;&nbsp;JSON: 0.2%<br />
  ⏰time wasted: 3 weeks
 
 ![""](https://www.reddit.com/media?url=https%3A%2F%2Fi.redd.it%2F9gwumjr5x5831.jpg)
