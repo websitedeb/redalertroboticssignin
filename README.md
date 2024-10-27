@@ -6,7 +6,7 @@ the docs page for this react-express application project
 - 🛠Configurations
     * [npm](https://www.npmjs.com/) -> Package Manager
     * [create-react-app](https://create-react-app.dev/) -> React Project Configurator 
-    * [jsdelivr](https://www.jsdelivr.com/)
+    * [jsdelivr](https://www.jsdelivr.com/) -> Content Distribution Network
     * [git](https://git-scm.com/) -> Version Control System
     * [github](https://github.com) -> Git Repository Hosting Platform
 
