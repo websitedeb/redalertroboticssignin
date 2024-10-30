@@ -39,8 +39,6 @@ the docs page for this react-express application project
     │   ├─ db.mjs
     │   └─ server.mjs
     ├─ /src ->
-    │   ├─ /assets ->
-    │   │   └─ FRC SIGN IN.png
     │   ├─ /comps ->
     │   │   ├─ spinner.css
     │   │   └─ spinner.jsx
@@ -80,10 +78,6 @@ public contains the html file that the components would be rendered on
     * App.js -> main component
     * index.css -> global css file
     * index.js -> renderer, handles react integrations with other frontend libraries
-
-#### /src/assets ####
-- contains .png
-    * FRC SIGN IN.png -> background image
 
 #### /src/comps ####
 - contains components to use in the pages

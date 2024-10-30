@@ -4,8 +4,12 @@ import { useMutation } from "@tanstack/react-query";
 import axios from "axios";
 import { Outlet, Link } from "react-router-dom";
 import Spinner from "../comps/spinner";
+import { useRef, useState } from "react";
 
 export function Auth(){
+    const ref = useRef(0);
+    const [copied, setState] = useState(false);
+
     async function Submition(formData){
         const response = await axios.post("/api/code/auth", {
             auth: formData.get("code")
@@ -23,6 +27,19 @@ export function Auth(){
         const formData = new FormData(event.target);
         mutate(formData);
     };
+
+    function teller(){
+        setState(true);
+        setTimeout(() => {
+            setState(false);
+        }, 1500);
+    }
+
+    const copy = () => {
+        const code = ref.current.innerText;
+        navigator.clipboard.writeText(code);
+        teller();
+    }
 
     if(isLoading){
         return <Spinner />
@@ -48,9 +65,16 @@ export function Auth(){
     if(data){
         return (
             <>
+                <div className={copied ? "alert alert-success text-xl text-center" : "hidden"}>
+                    Copied!
+                </div>
                 <div id="main" className="block bg-gray-100 min-h-screen flex items-center justify-center">
                     <div className="alert alert-success text-3xl text-center" role="alert">
-                            {data} <br></br> <Link to="/"><i class="bi bi-arrow-90deg-left"></i> Go back</Link>
+                        <span ref={ref}>{data}</span>
+                        <br></br> 
+                        <Link to="/"><i class="bi bi-arrow-90deg-left"></i> Go back</Link> 
+                        &nbsp;&nbsp; 
+                        <button onClick={copy}><i class="bi bi-clipboard2-plus"></i></button>
                     </div>
                 </div>
                 <Outlet />
