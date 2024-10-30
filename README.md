@@ -94,10 +94,9 @@ public contains the html file that the components would be rendered on
  🗄️files: 43,112<br />
  📁folders: 5,339<br />
  </>code:<br />
-    &nbsp;&nbsp;Javascript: 90.4%<br />
-    &nbsp;&nbsp;HTML: 6.2%<br />
-    &nbsp;&nbsp;CSS: 3.2%<br />
-    &nbsp;&nbsp;JSON: 0.2%<br />
+    &nbsp;&nbsp;Javascript: 91.2%<br />
+    &nbsp;&nbsp;HTML: 6.0%<br />
+    &nbsp;&nbsp;CSS: 2.8%<br />
  ⏰time wasted: 3 weeks
 
 <img src="https://cdn.donmai.us/sample/cc/20/sample-cc20def22845b688668b03615d7db1f1.jpg" height=500 width=500 />
