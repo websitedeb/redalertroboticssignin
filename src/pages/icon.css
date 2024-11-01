@@ -1,0 +1,7 @@
+#copy_icon{
+    transition: 0.2s;
+}
+
+#copy_icon:hover{
+    color: rgb(0, 255, 0) !important;
+}

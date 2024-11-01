@@ -1,10 +1,9 @@
-// eslint-disable-next-line
 import { useMutation } from "@tanstack/react-query";
-// eslint-disable-next-line
 import axios from "axios";
 import { Outlet, Link } from "react-router-dom";
 import Spinner from "../comps/spinner";
 import { useRef, useState } from "react";
+import "./icon.css";
 
 export function Auth(){
     const ref = useRef(0);
@@ -65,8 +64,8 @@ export function Auth(){
     if(data){
         return (
             <>
-                <div className={copied ? "alert alert-success text-xl text-center" : "hidden"}>
-                    Copied!
+                <div className={copied ? "alert alert-success text-xl text-center" : "hidden"} id="copied">
+                    <i className="bi bi-check-lg"></i> Copied!
                 </div>
                 <div id="main" className="block bg-gray-100 min-h-screen flex items-center justify-center">
                     <div className="alert alert-success text-3xl text-center" role="alert">
@@ -74,7 +73,7 @@ export function Auth(){
                         <br></br> 
                         <Link to="/"><i class="bi bi-arrow-90deg-left"></i> Go back</Link> 
                         &nbsp;&nbsp; 
-                        <button onClick={copy}><i class="bi bi-clipboard2-plus"></i></button>
+                        <button onClick={copy}><i class="bi bi-clipboard2-plus" id="copy_icon"></i></button>
                     </div>
                 </div>
                 <Outlet />

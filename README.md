@@ -44,6 +44,7 @@ the docs page for this react-express application project
     │   │   └─ spinner.jsx
     │   ├─ /pages ->
     │   │   ├─ code.jsx
+    │   │   ├─ icon.css
     │   │   └─ signin.jsx
     │   ├─ App.css
     │   ├─ App.js
