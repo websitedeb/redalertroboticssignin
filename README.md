@@ -9,7 +9,7 @@ the docs page for this react-express application project
     * [jsdelivr](https://www.jsdelivr.com/) -> Content Distribution Network
     * [git](https://git-scm.com/) -> Version Control System
     * [github](https://github.com) -> Git Repository Hosting Platform
-    * [serve](https://www.npmjs.com/package/serve) -> Static Site Hoster (used after building react app and setting up express server)
+    * [webpack](https://webpack.js.org/) -> File Bundler
 
 - 🖌️Frontend
     * [react](https://react.dev) -> Single Page Frontend Interface Bulding Library

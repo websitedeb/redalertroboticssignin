@@ -15,7 +15,7 @@ let hash;
 
 app.use(json());
 app.use(urlencoded({ extended: true }));
-app.use(express.static(join(process.cwd(), "build")));
+app.use(express.static(join(process.cwd(), "../build")));
 app.use(CORS({
     origin: 'http://localhost:3000'
 }));

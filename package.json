@@ -27,8 +27,11 @@
   "scripts": {
     "client": "react-scripts start",
     "build": "react-scripts build",
+    "construct": "webpack --config ./webpack.config.js",
+    "builder": "npx concurrently \"npm run build\" \"npm run construct\"",
     "server": "node ./server/server.mjs",
     "serve": "npx concurrently \"npm run server\" \"npm run client\"",
+    "prod": "node ./dist/bundle.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -51,6 +54,13 @@
     ]
   },
   "devDependencies": {
-    "serve": "^14.2.4"
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "babel-loader": "^9.2.1",
+    "dotenv-webpack": "^8.1.0",
+    "serve": "^14.2.4",
+    "webpack": "^5.96.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-node-externals": "^3.0.0"
   }
 }
