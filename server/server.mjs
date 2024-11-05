@@ -13,7 +13,7 @@ const app = express();
 const db = new DB()
 let hash;
 
-app.use(express.static(join(process.cwd(), "../build")));
+app.use(express.static(join(process.cwd(), "../app/build")));
 app.use(json());
 app.use(urlencoded({ extended: true }));
 app.use(CORS({
@@ -57,7 +57,7 @@ app.post("/api/code/auth", (req, res) => {
 });
 
 app.get('*', (req, res) => {
-    res.sendFile(join(process.cwd(), "../build", "index.html"));
+    res.sendFile(join(process.cwd(), "../app/build", "index.html"));
 });
 
 app.use((err, req, res, next) => {
