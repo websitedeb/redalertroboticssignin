@@ -13,9 +13,9 @@ const app = express();
 const db = new DB()
 let hash;
 
+app.use(express.static(join(process.cwd(), "../build")));
 app.use(json());
 app.use(urlencoded({ extended: true }));
-app.use(express.static(join(process.cwd(), "../build")));
 app.use(CORS({
     origin: 'http://localhost:3000'
 }));
@@ -54,4 +54,13 @@ app.post("/api/code/auth", (req, res) => {
             error: "Invalid auth"
         });
     }
+});
+
+app.get('*', (req, res) => {
+    res.sendFile(join(process.cwd(), "../build", "index.html"));
+});
+
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).send('Something went wrong!');
 });
